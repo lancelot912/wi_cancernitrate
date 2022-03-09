@@ -34,9 +34,13 @@
             <a1><label>Distance Decay Coefficient (q): &nbsp;</label><input id="ddc" type="number" value="2" min=1 max=10 /></a1>
             <a1><label>Cell Size: </label><input id="cellsize" type="number" value=10 min=1 max=15 /></a1><br>
             <a1><button id="interpolateBtn">Interpolate</button></a1><br><br>
-            <a1><label>Calculate Regression Residual:</label><button id="regressionBtn">Regression</button></a1><br>
+            <a1><label>Calculate Regression Residual:</label><br>
+            <button id="regressionBtn">Regression</button></a1><br><br>
             <a1><label>Regression Equation: </label>y:<label id='slope'></label> + x: <label id='intercept'></label>
         </div>
+        <br><br>
+        <div><button onClick="window.print()">Print Map
+        </button></div>
     </div>
     
     <script src="js/main.js"></script>

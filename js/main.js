@@ -253,14 +253,14 @@ function addLegend(){
         return div;
     };
 
+    
     //initialize legend with tracts data
     cancerTractsLegend.addTo(map);
     //get current legend content
     currentLegend = $(".legend")[0];
 }
 
-
-
+addLegend();
 
 
 //update legend when interpolate layer calculated
