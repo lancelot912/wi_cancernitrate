@@ -46,7 +46,7 @@ function highlightFeatureC(e) {
     // Show nitrate value in popup for current mouseover hex
     var popup = L.popup({closeButton:false})
     .setLatLng(e.latlng) 
-    .setContent('<b>Cancer Rate: </b>' + (layer.feature.properties.canrate).toFixed(2).toString() + '%')
+    .setContent('<b>Cancer Rate: </b>' + (layer.feature.properties.canrate).toFixed(2).toString())
     .openOn(map);
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
         layer.bringToFront();
@@ -195,7 +195,7 @@ function highlightFeatureE(e) {
     var popup = L.popup({closeButton:false})
         .setLatLng(e.latlng) 
         .setContent('<b>Nitrate Levels: </b>' + layer.feature.properties.nitrateMean.toFixed(3).toString() + ' ppm' +'<br>\
-                    <b>Cancer Rate: </b>' + layer.feature.properties.canrate.toFixed(3).toString() + '%' + '<br>\
+                    <b>Cancer Rate: </b>' + layer.feature.properties.canrate.toFixed(3).toString() + '<br>\
                     <b>Regression Error: </b>' + layer.feature.properties.regError.toFixed(3).toString())
         .openOn(map);
     // console.log(layer.feature.properties.nitr_ran)
@@ -243,7 +243,7 @@ function addLegend(){
             grades = [0, .05, .1, .15, .2],
             labels = [];
 
-        div.innerHTML = '<strong>Cancer Rate %:</strong>' + '<br>';
+        div.innerHTML = '<strong>Cancer Rate:</strong>' + '<br>';
         // loop through our density intervals and generate a label with a colored square for each interval
         for (var i = 0; i < grades.length; i++) {
             div.innerHTML += 
