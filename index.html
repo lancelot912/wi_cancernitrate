@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Wisconsin Water: Nitrates & Cancer Analysis</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"/> 
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>   
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,400italic,500,600,700' rel='stylesheet' type='text/css'>
+
+    <script src="https://unpkg.com/esri-leaflet@2.3.0/dist/esri-leaflet.js"></script>
+    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    <script src='https://unpkg.com/simple-statistics@7.0.2/dist/simple-statistics.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Load custom stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <div id="map"></div> 
+    <div id="input-pane" class="leaflet-bar">
+        <div>
+            <h1>Wisconsin Water: Nitrates & Cancer Analysis</h1>
+            <a1><p>Nitrate, especially in high concentrations, is a definite health hazard if it gets contaminated in our drinking water. But does Nitrate factor into people getting Cancer? This application tests to see if there's a relationship between Nitrate in drinking water and Cancer. </p>
+            <p>What does this map use to test this relationship? IDW or Inverse Distance Weighted for spatial interpolation, and OLS or Ordinary Least Squares is for linear regression.</p>
+            <p>To test if high concentrations of Nitrate found in water wells throughout Wisconsin is a definite factor in high cancer incidences, please enter a distance decay coefficient for spatial interpolation and the cell size.  </p>
+            </a1></div>
+        <div>
+            <a1><label>Distance Decay Coefficient (q): &nbsp;</label><input id="ddc" type="number" value="2" min=1 max=10 /></a1>
+            <a1><label>Cell Size: </label><input id="cellsize" type="number" value=10 min=1 max=15 /></a1><br>
+            <a1><button id="interpolateBtn">Interpolate</button></a1><br><br>
+            <a1><label>Calculate Regression Residual:</label><button id="regressionBtn">Regression</button></a1><br>
+            <a1><label>Regression Equation: </label>y:<label id='slope'></label> + x: <label id='intercept'></label>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
