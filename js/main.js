@@ -116,8 +116,8 @@ function nitrateLevelColor(feature) {
     return {
         fillColor: getNitrateRateColor(feature.properties.nitr_ran),
         weight: 0.5,
-        opacity: 0.5,
-        fillOpacity: 0.6
+        opacity: 1,
+        fillOpacity: 0.75
     };
 };
 
